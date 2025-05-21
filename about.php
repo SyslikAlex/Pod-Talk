@@ -1,6 +1,7 @@
+<?php $pageTitle = "About"; include 'header.php'; ?>
+
 <?php 
 $pageTitle = "About Pod";
-include 'header.php';  #includes
 ?>
     
     
@@ -160,7 +161,6 @@ include 'header.php';  #includes
         </main>
 
 
-        <?php include 'footer.php'; ?>
 
 
         <!-- JAVASCRIPT FILES -->
@@ -171,3 +171,5 @@ include 'header.php';  #includes
 
     </body>
 </html>
+
+<?php include 'footer.php'; ?>

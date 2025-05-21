@@ -1,6 +1,7 @@
+<?php $pageTitle = "Contact"; include 'header.php'; ?>
+
 <?php 
 $pageTitle = "About Pod";
-include 'header.php'; 
 ?>
     
     
@@ -94,7 +95,6 @@ include 'header.php';
         </main>
 
 
-        <?php include 'footer.php'; ?>
 
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
@@ -104,3 +104,5 @@ include 'header.php';
 
     </body>
 </html>
+
+<?php include 'footer.php'; ?>
