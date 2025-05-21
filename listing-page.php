@@ -386,4 +386,46 @@ $pageTitle = "About Pod";
     </body>
 </html>
 
+<?php include 'footer.php'; ?><?php
+$podcasts = [
+    [
+        "title" => "Modern Web Development",
+        "category" => "Technology",
+        "speaker" => "Michael",
+        "image" => "images/podcast/27376480_7326766.jpg"
+    ],
+    [
+        "title" => "Health & Wellness",
+        "category" => "Lifestyle",
+        "speaker" => "Anna",
+        "image" => "images/podcast/27376480_7326775.jpg"
+    ],
+    [
+        "title" => "Business Talks",
+        "category" => "Business",
+        "speaker" => "Robert",
+        "image" => "images/podcast/27376480_7326781.jpg"
+    ]
+];
+?>
+
+<div class="row custom-block">
+<?php foreach ($podcasts as $podcast): ?>
+    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+        <div class="custom-block bg-white shadow-lg">
+            <a href="detail-page.php">
+                <div class="d-flex">
+                    <div>
+                        <h5 class="mb-2"><?= htmlspecialchars($podcast["title"]) ?></h5>
+                        <p class="mb-0"><?= htmlspecialchars($podcast["category"]) ?></p>
+                        <small class="text-muted"><?= htmlspecialchars($podcast["speaker"]) ?></small>
+                    </div>
+                </div>
+                <img src="<?= htmlspecialchars($podcast["image"]) ?>" class="custom-block-image img-fluid" alt="">
+            </a>
+        </div>
+    </div>
+<?php endforeach; ?>
+</div>
+
 <?php include 'footer.php'; ?>
