@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit;
+}
+
 require_once "Podcast.php";
 
 $podcast = new Podcast();
@@ -13,7 +19,7 @@ $all = $podcast->getAll();
 </head>
 <body>
     <h1>Všetky podcasty</h1>
-
+    <p>Prihlásený ako: <?= htmlspecialchars($_SESSION["user"]) ?> | <a href="logout.php">Odhlásiť sa</a></p>
     <a href="create.php">➕ Pridať nový podcast</a><br><br>
 
     <table border="1" cellpadding="10">
